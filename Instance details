@@ -1,0 +1,76 @@
+Instance ID
+i-0121d8bdb67f1cbe8
+Public DNS (IPv4)
+ec2-3-15-215-1.us-east-2.compute.amazonaws.com
+Instance state
+running
+IPv4 Public IP
+3.15.215.1
+Instance type
+t2.micro
+IPv6 IPs
+-
+Elastic IPs
+Private DNS
+ip-172-31-38-199.us-east-2.compute.internal
+Availability zone
+us-east-2c
+Private IPs
+172.31.38.199
+Security groups
+AWS_Python. view inbound rules. view outbound rules
+Secondary private IPs
+Scheduled events
+No scheduled events
+VPC ID
+vpc-2833c543
+AMI ID
+amzn2-ami-hvm-2.0.20190823.1-x86_64-gp2 (ami-00c03f7f7f2ec15c3)
+Subnet ID
+subnet-0ecb7442
+Platform
+-
+Network interfaces
+eth0
+IAM role
+-
+Source/dest. check
+True
+Key pair name
+AWS_Python
+T2/T3 Unlimited
+Disabled
+Owner
+404186411693
+EBS-optimized
+False
+Launch time
+September 29, 2019 at 3:51:50 PM UTC+5:30 (less than one hour)
+Root device type
+ebs
+
+Connect:
+ssh -i AWS_Python.pem ec2-user@3.15.215.1
+
+
+docker:
+sudo yum update -y
+sudo amazon-linux-extras install docker -y
+sudo service docker start
+sudo usermod -a -G docker ec2-user
+sudo systemctl enable docker.service
+sudo systemctl start docker.service
+
+
+sudo docker info
+
+sudo curl -l https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -m) -o /usr/local/bin/docker-composesudo
+
+sudo curl -l https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -m) -o docker-compose
+
+sudo chmod +x docker-compose
+
+sudo mv docker-compose /usr/local/bin/docker-compose
+
+sudo docker-compose version
+sudo docker run -d -p 3000:3000 beingzero/hello-asdi
