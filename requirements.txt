@@ -1,1 +1,6 @@
 flask
+flask_sqlalchemy
+flask_marshmallow
+flask_jwt
+flask_mail
+flask_jwt_extended
