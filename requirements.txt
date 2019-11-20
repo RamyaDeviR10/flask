@@ -4,4 +4,4 @@ flask_marshmallow
 flask_jwt
 flask_mail
 flask_jwt_extended
-pyjwt == 1.6
+pyjwt == 1.6.4
